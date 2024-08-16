@@ -1,27 +1,72 @@
 {
   "expo": {
-    "name": "sheconomy",
+    "name": "SHEconomy",
     "slug": "sheconomy",
-    "version": "1.0.0",
+    "version": "2.1.1",
+    "platforms": ["ios", "android"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
+    "updates": {
+      "fallbackToCacheTimeout": 0,
+      "checkAutomatically": "ON_LOAD"
     },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sheconomy.ecommerce",
+      "buildNumber": "5",
+      "infoPlist": {
+        "FacebookAppID": "1234",
+        "FacebookDisplayName": "SHEconomy",
+        "NSUserTrackingUsageDescription": "This identifier will be used to deliver personalized ads to you.",
+        "SKAdNetworkItems": [
+          {
+            "SKAdNetworkIdentifier": "v9wttpbfk9.skadnetwork"
+          },
+          {
+            "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
+          }
+        ],
+        "NSCameraUsageDescription": "This app requires access to the camera for taking photos.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to select and upload photos.",
+        "NSMicrophoneUsageDescription": "This app requires access to the microphone for recording audio.",
+        "NSLocationWhenInUseUsageDescription": "This app requires access to your location when the app is in use.",
+        "NSLocationAlwaysUsageDescription": "This app requires access to your location at all times."
       }
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "android": {
+      "package": "com.sheconomy.ecommerce",
+      "versionCode": 25,
+      "permissions": [
+        "CAMERA",
+        "INTERNET",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_NETWORK_STATE",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS",
+        "VIDEO_CAPTURE",
+        "AUDIO_CAPTURE"
+      ],
+      "config": {
+        "facebookAppId": "1234",
+        "facebookDisplayName": "SHEconomy"
+      },
+      "keystore": {
+        "keystorePath": "./assets/keystore.jks",
+        "keystorePassword": "android",
+        "keyAlias": "upload",
+        "keyPassword": "android"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3b291518-a082-4a36-ac7a-4638f6d82ad5"
+      }
+    },
+    "owner": "sheconomy"
   }
 }
