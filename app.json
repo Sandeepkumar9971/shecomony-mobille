@@ -50,17 +50,7 @@
         "MODIFY_AUDIO_SETTINGS",
         "VIDEO_CAPTURE",
         "AUDIO_CAPTURE"
-      ],
-      "config": {
-        "facebookAppId": "1234",
-        "facebookDisplayName": "SHEconomy"
-      },
-      "keystore": {
-        "keystorePath": "./assets/keystore.jks",
-        "keystorePassword": "android",
-        "keyAlias": "upload",
-        "keyPassword": "android"
-      }
+      ]
     },
     "extra": {
       "eas": {

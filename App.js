@@ -25,14 +25,14 @@ const WebScreen = memo(({ url, onCanGoBackChange, tabTitle }) => {
   const [loading, setLoading] = useState(true);
   const [canGoBack, setCanGoBack] = useState(false);
 
-  useEffect(() => {
-    if (Facebook.AppEvents) {
-      Facebook.AppEvents.logEvent('tab_view', {
-        tab: tabTitle,
-        url: url,
-      });
-    }
-  }, [tabTitle, url]);
+  // useEffect(() => {
+  //   if (Facebook.AppEvents) {
+  //     Facebook.AppEvents.logEvent('tab_view', {
+  //       tab: tabTitle,
+  //       url: url,
+  //     });
+  //   }
+  // }, [tabTitle, url]);
 
   const handleBackPress = () => {
     if (canGoBack) {
@@ -169,20 +169,20 @@ export default function App() {
     }
   }, []);
 
-  useEffect(() => {
-    const initFacebook = async () => {
-      try {
-        await Facebook.initializeAsync({
-          appId: '1234', // Replace with your Facebook App ID
-        });
-        Facebook.AppEvents.activateApp();
-      } catch (e) {
-        console.error('Error initializing Facebook SDK:', e);
-      }
-    };
+  // useEffect(() => {
+  //   const initFacebook = async () => {
+  //     try {
+  //       await Facebook.initializeAsync({
+  //         appId:'1234', 
+  //       });
+  //       Facebook.AppEvents.activateApp();
+  //     } catch (e) {
+  //       console.error('Error initializing Facebook SDK:', e);
+  //     }
+  //   };
 
-    initFacebook();
-  }, []);
+  //   initFacebook();
+  // }, []);
 
   useEffect(() => {
     const requestPermissions = async () => {
